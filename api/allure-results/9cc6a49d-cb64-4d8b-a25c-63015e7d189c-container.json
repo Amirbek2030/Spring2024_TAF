@@ -1,1 +1,0 @@
-{"uuid":"9cc6a49d-cb64-4d8b-a25c-63015e7d189c","name":"talentLMS.api_tests.UserTest","children":["7f7a5ca5-81e3-45cc-ad23-c72887d4991f"],"befores":[{"name":"beforeClass","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1726663768239,"stop":1726663768239}],"afters":[],"links":[],"start":1726663768233,"stop":1726663772590}
