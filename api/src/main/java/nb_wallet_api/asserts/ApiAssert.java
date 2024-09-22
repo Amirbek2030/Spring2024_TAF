@@ -1,9 +1,9 @@
-package talentlms.api.asserts;
+package nb_wallet_api.asserts;
 
 import io.restassured.response.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
-import talentlms.api.entity.User;
+
 
 @Slf4j
 public class ApiAssert {
@@ -11,10 +11,6 @@ public class ApiAssert {
 
     public ApiAssert(Response response) {
         this.response = response;
-    }
-
-    public static ApiAssert assertThat(Response response) {
-        return new ApiAssert(response);
     }
 
     public ApiAssert isCorrectStatusCode(Integer expectedStatusCode) {
@@ -25,11 +21,9 @@ public class ApiAssert {
                 .isEqualTo(expectedStatusCode);
         log.info("Status code is correct {}", expectedStatusCode);
         return this;
-    }
 
-    public UserAssert assertUser(User user) {
-        return UserAssert.assertThat(user);
+    }
+    public static ApiAssert assertThat(Response response) {
+        return new ApiAssert(response);
     }
 }
-
-

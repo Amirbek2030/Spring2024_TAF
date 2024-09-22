@@ -68,23 +68,4 @@ public abstract class ApiRequest {
         logResponse();
         return this.response;
     }
-
-    //first_name:Akim
-    //last_name:AkimSurname
-    //email:akim@gmail.com
-    //login:akim
-    //password:ABC123abc!@#
-    //status:inactive
-
-    protected Response post(String endPoint, Map<String, String> params) {
-        log.info("Performed post {}", endPoint);
-        log.info("Params is {}", params);
-        this.response = given()
-                .spec(requestSpecification)
-                .formParams(params)
-                .post(endPoint);
-        logResponse();
-        return this.response;
-    }
-
 }
